@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * IFPI - ADS - 2015.2
+ * 2011.2ADS0019 Adriano José Sousa Santos  * 
  */
 package Exercicio22dez2015;
 /**
@@ -21,7 +20,7 @@ public class uri1009 {
         interatividade.digiteValor();
         SALES = interatividade.teclado.nextDouble();
         
-        SALARY = SALARY + (SALES * 0.15);
+        SALARY = SALARY + (SALES * 0.02);
         System.out.println(NAME+" SALARY = "+SALARY);
     }
         

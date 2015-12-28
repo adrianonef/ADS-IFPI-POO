@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * IFPI - ADS - 2015.2
+ * 2011.2ADS0019 Adriano José Sousa Santos  * 
  */
 package Exercicio22dez2015;
 /**

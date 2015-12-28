@@ -3,20 +3,21 @@
  * 2011.2ADS0019 Adriano José Sousa Santos  * 
  */
 package Exercicio23dez2015;
+
 /**
  *
  * @author adrianonef
  */
-public class Question01 {
+public class Question04 {
     public static void main(String[] args) {
-        int x;
-        float y;
+        int N,writeNumbers = 1;
         Interatividade interatividade = new Interatividade();
-
+        
         interatividade.digiteValor();
-        x = interatividade.teclado.nextInt();
-        interatividade.digiteValor();
-        y = interatividade.teclado.nextFloat();
-        System.out.println(interatividade.df.format(x/y)+" Km/l");
+        N = interatividade.teclado.nextInt();
+        for (int i = 0; (i < N); i++){
+            System.out.println( writeNumbers++ +" "+ writeNumbers++ +" "+ writeNumbers++ + " IFPI");
+            writeNumbers++;
+        }
     }
 }
