@@ -12,31 +12,27 @@ public class Question06 {
     
     public static void main(String[] args) {
         Interatividade interatividade = new Interatividade();
+        int n,value, amontTypeC = 0, amontTypeR = 0, amontTypeS = 0;
+        String type;
+        
         interatividade.digiteValor();
-        int N = interatividade.teclado.nextInt();
-        Cobaia[] cobaias = new Cobaia[N];
-                 
-        //Preenchendo Array do Tipo Cobaia com N elementos        
-        for(Cobaia cobaia : cobaias){
-            System.out.println("Entrando no FOR");
+        n = interatividade.teclado.nextInt();
+        for(int i =0; i < n ; i++){
             interatividade.digiteValor();
-            cobaia.setAmontTest(interatividade.teclado.nextInt());
+            value = interatividade.teclado.nextInt();
             System.out.println("Digite o tipo C = Coelho, R = Rato, S = Sapo");
-            cobaia.setType(interatividade.teclado.next());
+            type = interatividade.teclado.next();
+            interatividade.teclado.nextLine();
+            amontTypeC = type.toUpperCase().equals("C") ? amontTypeC + value : amontTypeC;
+            amontTypeR = type.toUpperCase().equals("R") ? amontTypeR + value : amontTypeR;
+            amontTypeS = type.toUpperCase().equals("S") ? amontTypeR + value : amontTypeR;
+            }
+        System.out.println("Total "+ (amontTypeC + amontTypeR + amontTypeS)+ " Cobaias");
+        System.out.println("Total de coelhos: "+amontTypeC);
+        System.out.println("Total de ratos: "+amontTypeR);
+        System.out.println("Total de sapos: "+amontTypeS);
+        System.out.println("Percentual de coelhos: "+(amontTypeC * 100 /(amontTypeC + amontTypeR + amontTypeS))+"%");
+        System.out.println("Percentual de ratos: "+(amontTypeR * 100 /(amontTypeC + amontTypeR + amontTypeS))+"%");
+        System.out.println("Percentual de sapos: "+(amontTypeS * 100 /(amontTypeC + amontTypeR + amontTypeS))+"%");
         }
-        
-        //Somando todas cobaias
-        System.out.println("Total : " + interatividade.sumAllTest(cobaias) + " cobaias");
-
-        //Somando Testes com Coelhos        
-        System.out.println("Total de coelhos : " + interatividade.sumTestTypeN("C",cobaias) );
-        
-        //Somando Testes com Ratos      
-        System.out.println("Total de ratos : " + interatividade.sumTestTypeN("R",cobaias) );
-        
-        //Somando Testes com Sapos       
-        System.out.println("Total de sapos : " + interatividade.sumTestTypeN("S",cobaias) );
-        
-        
-    }
-}
+}   

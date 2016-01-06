@@ -24,14 +24,14 @@ public class Interatividade {
     
     public int sumAllTest(Cobaia[] cobaias){
         int sum = 0;
-        for( Cobaia cobaia : cobaias) sum = sum + cobaia.getAmontTest();
+        for( Cobaia cobaia : cobaias) sum = sum + cobaia.amontTest;
         return sum;
     }
     
     public int sumTestTypeN(String type, Cobaia[] cobaias){
         int sum = 0;
         for( Cobaia cobaia : cobaias){
-            if (cobaia.getType().equals(type)) sum = sum +cobaia.getAmontTest(); 
+            if (cobaia.type.equals(type)) sum = sum +cobaia.amontTest; 
         }
         return sum;
     }
