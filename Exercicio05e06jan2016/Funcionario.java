@@ -11,7 +11,9 @@ package Exercicio05e06jan2016;
 public class Funcionario {
     private String name, department, dateBank, rg;
     private double salary;
-
+    private static int counter = 0;
+    private int indentifier;
+    
     public String getName() {
         return name;
     }
@@ -55,10 +57,29 @@ public class Funcionario {
     void recebeAumento(int value){
         salary = salary + value;
     }
+
+    public static int getCounter() {
+        return counter;
+    }
+
+    public static void setCounter() {
+         ++Funcionario.counter;
+    }
+
+    public int getIndentifier() {
+        return indentifier;
+    }
+
+    public void setIndentifier(int indentifier) {
+        this.indentifier = indentifier;
+    }
+    
+    
     double calculaGanhoAnual(){
         return salary*12;
     }
     void mostra(){
+        System.out.println("Intentificador: "+indentifier);
         System.out.println("Nome: "+name);
         System.out.println("Departamento: "+department);
         System.out.println("Data abertura de conta : "+dateBank);
@@ -67,10 +88,14 @@ public class Funcionario {
     }
 
     public Funcionario() {
+        Funcionario.setCounter();
+        indentifier = Funcionario.getCounter();
     }
 
     public Funcionario(String name) {
+        Funcionario.setCounter();
         this.name = name;
+        indentifier = Funcionario.getCounter();
     }
     
 }
