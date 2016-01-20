@@ -12,7 +12,7 @@ public class TestTable {
     public static void main(String[] args) {
         Restaurant restaurante = new Restaurant("Chicos BAR",10);
         System.out.println(restaurante);
-        restaurante.getTables()[1].setStatus("Teste");
+        restaurante.getTables()[1].setStatus("TESTE");
         System.out.println(restaurante);
     }
 }

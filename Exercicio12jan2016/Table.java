@@ -39,7 +39,8 @@ public class Table {
     }
 
     public void setStatus(String status) {
-           this.status = status;
+           
+            this.status = status;
            if(status.equals(DISPONIVEL)){
                //add array Order
            }
